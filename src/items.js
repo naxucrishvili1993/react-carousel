@@ -7,7 +7,11 @@ const items = [
 		image: image1,
 		text: "Sign in with Email or Phone Number",
 		control: (
-			<form action="#">
+			<form
+				action="#"
+				onSubmit={(event) => {
+					event.preventDefault();
+				}}>
 				<input type="text" placeholder="Email or phone number" />
 				<button type="submit">Sign In</button>
 			</form>
@@ -17,7 +21,11 @@ const items = [
 		image: image2,
 		text: "Enter the password",
 		control: (
-			<form action="#">
+			<form
+				action="#"
+				onSubmit={(event) => {
+					event.preventDefault();
+				}}>
 				<input type="password" placeholder="Password" />
 				<button type="submit">Sign In</button>
 			</form>
