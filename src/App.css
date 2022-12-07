@@ -14,6 +14,7 @@ body {
 }
 
 #root {
+	margin-top: 10%;
 }
 .image {
 	height: 150px;
@@ -79,6 +80,11 @@ button:hover {
 }
 .last-btn {
 	border-radius: 10px;
+}
+@media screen and (min-width: 576px) {
+	#root {
+		width: 400px;
+	}
 }
 
 @media screen and (max-width: 576px) {
