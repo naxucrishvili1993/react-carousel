@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+	align-items: center;
+	background-color: #8b72fe;
+	background-image: url("./background.svg");
+	background-size: 2500px 1000px;
+	box-sizing: border-box;
+	color: white;
+	display: flex;
+	font-family: "Roboto", sans-serif;
+	justify-content: center;
+	letter-spacing: 1px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 200px;
+}
+.image {
+	height: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+	font-size: 1.3rem;
+	margin: 20px auto;
+	text-align: center;
+	width: 70%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container .carousel-root {
+	align-items: center;
+	box-sizing: border-box;
+	border-radius: 10px;
+	background-color: hsla(260, 60%, 50%, 0.9);
+	display: flex;
+	justify-content: center;
+	margin: 20% auto 0 13.5%;
+	width: 80%;
+}
+.card {
+	padding: 50px 0;
+	text-align: center;
+	width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.control-dots .dot {
+	background-color: rgb(201, 0, 201) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input::placeholder {
+	color: rgb(202, 202, 202);
+}
+input {
+	background-color: hsla(260, 50%, 50%, 1);
+	border: none;
+	border-radius: 8px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	color: white;
+	font-family: "Roboto", sans-serif;
+	height: 30px;
+	outline: none;
+	padding-left: 5px;
+}
+
+button {
+	background-color: hsla(260, 80%, 50%, 1);
+	border: none;
+	border-radius: 10px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	color: white;
+	cursor: pointer;
+	font-family: "Roboto", sans-serif;
+	letter-spacing: 1px;
+	padding: 8px 10px;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+.last-btn {
+	border-radius: 10px;
 }

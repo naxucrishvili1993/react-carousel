@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import items from "./items";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="container">
+			<Carousel
+				showArrows={false}
+				swipeable={true}
+				showStatus={false}
+				showThumbs={false}
+				useKeyboardArrows={false}>
+				{items.map((el, index) => {
+					return (
+						<div className="card" key={index}>
+							<img className="image" src={el.image} alt="Illustration" />
+							<h1>{el.text}</h1>
+							{el.control}
+						</div>
+					);
+				})}
+			</Carousel>
+		</div>
+	);
 }
 
 export default App;
